@@ -11,6 +11,7 @@ _$_UserWithGeneration _$_$_UserWithGenerationFromJson(
   return _$_UserWithGeneration(
     name: json['name'] as String,
     age: json['age'] as int,
+    coolness: json['coolness'] as int,
   );
 }
 
@@ -19,4 +20,5 @@ Map<String, dynamic> _$_$_UserWithGenerationToJson(
     <String, dynamic>{
       'name': instance.name,
       'age': instance.age,
+      'coolness': instance.coolness,
     };

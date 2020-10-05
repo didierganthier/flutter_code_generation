@@ -17,10 +17,11 @@ class _$UserWithGenerationTearOff {
   const _$UserWithGenerationTearOff();
 
 // ignore: unused_element
-  _UserWithGeneration call({String name, int age}) {
+  _UserWithGeneration call({String name, int age, int coolness}) {
     return _UserWithGeneration(
       name: name,
       age: age,
+      coolness: coolness,
     );
   }
 
@@ -38,6 +39,7 @@ const $UserWithGeneration = _$UserWithGenerationTearOff();
 mixin _$UserWithGeneration {
   String get name;
   int get age;
+  int get coolness;
 
   Map<String, dynamic> toJson();
   $UserWithGenerationCopyWith<UserWithGeneration> get copyWith;
@@ -48,7 +50,7 @@ abstract class $UserWithGenerationCopyWith<$Res> {
   factory $UserWithGenerationCopyWith(
           UserWithGeneration value, $Res Function(UserWithGeneration) then) =
       _$UserWithGenerationCopyWithImpl<$Res>;
-  $Res call({String name, int age});
+  $Res call({String name, int age, int coolness});
 }
 
 /// @nodoc
@@ -64,10 +66,12 @@ class _$UserWithGenerationCopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object age = freezed,
+    Object coolness = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       age: age == freezed ? _value.age : age as int,
+      coolness: coolness == freezed ? _value.coolness : coolness as int,
     ));
   }
 }
@@ -79,7 +83,7 @@ abstract class _$UserWithGenerationCopyWith<$Res>
           _UserWithGeneration value, $Res Function(_UserWithGeneration) then) =
       __$UserWithGenerationCopyWithImpl<$Res>;
   @override
-  $Res call({String name, int age});
+  $Res call({String name, int age, int coolness});
 }
 
 /// @nodoc
@@ -97,10 +101,12 @@ class __$UserWithGenerationCopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object age = freezed,
+    Object coolness = freezed,
   }) {
     return _then(_UserWithGeneration(
       name: name == freezed ? _value.name : name as String,
       age: age == freezed ? _value.age : age as int,
+      coolness: coolness == freezed ? _value.coolness : coolness as int,
     ));
   }
 }
@@ -109,7 +115,7 @@ class __$UserWithGenerationCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_UserWithGeneration implements _UserWithGeneration {
-  const _$_UserWithGeneration({this.name, this.age});
+  const _$_UserWithGeneration({this.name, this.age, this.coolness});
 
   factory _$_UserWithGeneration.fromJson(Map<String, dynamic> json) =>
       _$_$_UserWithGenerationFromJson(json);
@@ -118,10 +124,12 @@ class _$_UserWithGeneration implements _UserWithGeneration {
   final String name;
   @override
   final int age;
+  @override
+  final int coolness;
 
   @override
   String toString() {
-    return 'UserWithGeneration(name: $name, age: $age)';
+    return 'UserWithGeneration(name: $name, age: $age, coolness: $coolness)';
   }
 
   @override
@@ -131,14 +139,18 @@ class _$_UserWithGeneration implements _UserWithGeneration {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.age, age) ||
-                const DeepCollectionEquality().equals(other.age, age)));
+                const DeepCollectionEquality().equals(other.age, age)) &&
+            (identical(other.coolness, coolness) ||
+                const DeepCollectionEquality()
+                    .equals(other.coolness, coolness)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(age);
+      const DeepCollectionEquality().hash(age) ^
+      const DeepCollectionEquality().hash(coolness);
 
   @override
   _$UserWithGenerationCopyWith<_UserWithGeneration> get copyWith =>
@@ -151,7 +163,7 @@ class _$_UserWithGeneration implements _UserWithGeneration {
 }
 
 abstract class _UserWithGeneration implements UserWithGeneration {
-  const factory _UserWithGeneration({String name, int age}) =
+  const factory _UserWithGeneration({String name, int age, int coolness}) =
       _$_UserWithGeneration;
 
   factory _UserWithGeneration.fromJson(Map<String, dynamic> json) =
@@ -161,6 +173,8 @@ abstract class _UserWithGeneration implements UserWithGeneration {
   String get name;
   @override
   int get age;
+  @override
+  int get coolness;
   @override
   _$UserWithGenerationCopyWith<_UserWithGeneration> get copyWith;
 }

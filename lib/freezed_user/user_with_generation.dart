@@ -7,7 +7,8 @@ part 'user_with_generation.g.dart';
 abstract class UserWithGeneration with _$UserWithGeneration{
   const factory UserWithGeneration({
     String name,
-    int age
+    int age,
+    int coolness
   }) = _UserWithGeneration;
 
   factory UserWithGeneration.fromJson(Map<String, dynamic> json) => _$UserWithGenerationFromJson(json);
